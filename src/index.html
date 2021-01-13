@@ -6,14 +6,38 @@
     <title>rsclone</title>
 </head>
 <body>
-    <div class="container">
-        <form class="search">
-            <input class="search__input" type="text" placeholder="Search book" autocomplete="off" maxlength="40" autofocus>
-            <div class="search__cross"></div>
-            <button type="button" class="search__btn">
-                <div class="search__icon"></div>
-            </button>
-        </form>
+    <div id="wrapper">
+        <header class="header">
+            <h1 class="header__title">MovieSearch</h1>
+        </header>
+        <main class="main">
+            <form class="search">
+                <span class="search--search"></span>
+                <input class="search__input" type="text" placeholder="Search movie" autocomplete="off" autofocus>
+                <span class="search--cross"></span>
+                <span class="search--keyboard"></span>
+                <button class="search__btn">Search</button>
+            </form>
+            <section class="slider-container">
+                <div class="slider-buttons">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <a href="https://rs.school/js/" class="footer__link">
+                <p class="footer__info">RS School 2020q1</p>
+            </a>
+            <a href="https://github.com/mmaaaaaaaails" class="footer__link">
+                <p class="footer__info icon-github">mmaaaaaaaails github</p>
+            </a>
+        </footer>
     </div>
 </body>
 </html>

@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+#wrapper {
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  rgb(39, 45, 56);
+    height: 60px;
+}
+
+.header__title {
+    color: white;
+    font-weight: 900;
+}
+
+.main {
+    min-height: 650px;
+    background: rgb(33, 32, 51);
+    box-sizing: border-box;
+}
+
+.search {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 20px;
+}
+
+.search__input {
+    height: 30px;
+    width: 860px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+
+.search--search {
+    position: relative;
+}
+
+.search--search::before {
+    content: "";
+    position: absolute;
+    background-image: url(/assets/img/search.svg);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.search--cross {
+    position: relative;
+}
+
+.search--cross::after {
+    content: "";
+    position: absolute;
+    background-image: url(/assets/img/cross.svg);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    right: 65px;
+    cursor: pointer;
+}
+
+.search--keyboard {
+    position: relative;
+}
+
+.search--keyboard::after {
+    content: "";
+    position: absolute;
+    background-image: url(/assets/img/keyboard.svg);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    top: -15px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.search__btn {
+    height: 30px;
+    width: 60px;
+    background: rgb(214,45,27);
+    color: white;
+    border: 1px solid transparent;
+}
+
+.footer {
+    height: 60px;
+    background-color: rgb(51,51,63);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer__link {
+    text-decoration: none;
+}
+
+.footer__info {
+    color: white;
+    font-weight: 700;
+}
+
+.icon-github {
+    position: relative;
+}
+
+.icon-github::after {
+    content: "";
+    position: absolute;
+    background-image: url(/assets/img/github.svg);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    top: -10px;
+    left: -50px;
+}
+
+.swiper-container {
+    width: 70%;
+    height: 100%;
+}
+
+.swiper-slide:hover {
+    cursor: pointer;
+}
+
+.сards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.сards__poster{
+    width: 302px;
+    height: 350px;
+    padding-bottom: 10px;
+    object-fit: cover;
+}
+
+.сards__title {
+    color: white;
+    width: 300px;
+    text-align: center;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+
+.сards__title:hover {
+    color:  #22d389;
+}
+
+.сards__year {
+    text-align: center;
+    color: white;
+}
