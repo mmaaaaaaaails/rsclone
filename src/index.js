@@ -1,6 +1,7 @@
 import './assets/css/main.css';
 import './assets/scss/main.scss';
 import './js/common';
+<<<<<<< HEAD
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
 import 'swiper/swiper-bundle.min.css';
@@ -50,3 +51,5 @@ async function getMovie() {
 }
 
 getMovie();
+=======
+>>>>>>> 0b3e79e31fe4b8325eaa0b57fdf5585d47b8a036
