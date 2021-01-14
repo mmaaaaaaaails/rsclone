@@ -1,7 +1,10 @@
 import './assets/css/main.css';
+import './assets/scss/main.scss';
 import './js/common';
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
+import 'swiper/swiper-bundle.min.css';
+import 'swiper/swiper.min.css';
 
 const mySwiper = new Swiper('.swiper-container', {
     slidesPerView: 3,

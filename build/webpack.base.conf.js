@@ -15,7 +15,7 @@ module.exports = {
     },
 
     entry: {
-        app: PATHS.src
+        app: ['babel-polyfill', PATHS.src]
     },
 
     output: {
