@@ -35,6 +35,7 @@ async function getMovie() {
     const film = localStorage.getItem('film');
     if (film !== null) {
         url = `https://www.omdbapi.com/?s=${film}&page=&apikey=58b35b66`;
+        searchArea.value = film;
     }
     const response = await fetch(url);
     data = await response.json();
