@@ -1,0 +1,46 @@
+.swiper-container {
+    width: 70%;
+    height: 100%;
+}
+
+.swiper-slide:hover {
+    cursor: pointer;
+}
+
+.сards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__poster{
+        width: 302px;
+        height: 500px;
+        padding-bottom: 10px;
+        object-fit: cover;
+    }
+
+    &__title {
+        color: #000000;
+        font-weight: bold;
+        width: 350px;
+        text-align: center;
+        padding-bottom: 10px;
+        text-decoration: none;
+
+        &:hover {
+            color: wheat;
+            transition: 0.5s linear;
+        }
+    }
+
+    &__year {
+        text-align: center;
+        color: #000000;
+        font-weight: bold;
+
+        &:hover {
+            color: wheat;
+            transition: 0.5s linear;
+        }
+    }
+}

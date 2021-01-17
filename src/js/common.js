@@ -73,3 +73,15 @@ function checkEnter(e) {
 searchArea.addEventListener('keydown', checkEnter, false);
 
 getMovie();
+
+const cross = document.querySelector('.search--cross');
+const form = document.querySelector('.search');
+
+function clearInput() {
+    cross.addEventListener('click', () => {
+        form.reset();
+        searchFilm();
+    });
+}
+
+clearInput();

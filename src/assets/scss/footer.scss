@@ -1,0 +1,57 @@
+.footer {
+    width: 100%;
+    position: absolute;
+    margin-top: -40px;
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__rss {
+        background-color: #000000;
+        padding: 5px;
+        border-radius: 10px;
+        margin-left: 10px;
+    }
+
+    &__author {
+        background-color: #000000;
+        padding: 5px;
+        border-radius: 10px;
+        margin-right: 10px;
+    }
+
+    &__info {
+        text-decoration: none;
+        color: wheat;
+
+        &:hover {
+            color: coral;
+            transition: 0.5s linear;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url(/assets/img/git.svg);
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            top: -10px;
+            left: 15px;
+        }
+
+        &:hover::after {
+            animation: swing .9s ease;
+            animation-iteration-count: 1;
+            cursor: pointer;
+        }
+    }
+}

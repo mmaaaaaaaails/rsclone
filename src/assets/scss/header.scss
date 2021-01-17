@@ -1,0 +1,11 @@
+.header {
+    padding-top: 10px;
+    width: 100%;
+    position: absolute;
+
+    &__title {
+        color: white;
+        font-weight: 900;
+        display: none;
+    }
+}
