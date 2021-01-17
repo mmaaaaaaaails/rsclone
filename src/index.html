@@ -9,6 +9,7 @@
     <div id="wrapper">
         <header class="header">
             <h1 class="header__title">MovieSearch</h1>
+            <div id="google_translate_element"></div>
         </header>
         <main class="main">
             <form class="search">
@@ -42,5 +43,14 @@
             </div>
         </footer>
     </div>
+    <script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'en'},
+            'google_translate_element'
+        );
+    }
+    </script>
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
