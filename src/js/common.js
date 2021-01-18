@@ -3,8 +3,9 @@ import 'swiper/swiper-bundle.css';
 
 const searchBtn = document.querySelector('.search__btn');
 const searchArea = document.querySelector('.search__input');
+const film = localStorage.getItem('film');
 let data;
-let url = 'https://www.omdbapi.com/?s=dream&page=&apikey=58b35b66';
+let keywords;
 
 const mySwiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
@@ -32,11 +33,8 @@ const mySwiper = new Swiper('.swiper-container', {
 });
 
 async function getMovie() {
-    const film = localStorage.getItem('film');
-    if (film !== null) {
-        url = `https://www.omdbapi.com/?s=${film}&page=&apikey=58b35b66`;
-        searchArea.value = film;
-    }
+    const url = `https://www.omdbapi.com/?s=${film}&page=&apikey=58b35b66`;
+    searchArea.value = film;
     const response = await fetch(url);
     data = await response.json();
     const siteUrl = 'https://www.imdb.com/title/';
@@ -54,8 +52,19 @@ async function getMovie() {
 }
 
 function searchFilm() {
-    url = `https://www.omdbapi.com/?s=${searchArea.value}&page=&apikey=58b35b66`;
     localStorage.setItem('film', searchArea.value);
+    if (keywords === undefined) {
+        keywords = searchArea.value;
+        localStorage.setItem(searchArea.value, 1);
+    } else if (keywords.includes(searchArea.value) === false) {
+        keywords.push(searchArea.value);
+        localStorage.setItem(searchArea.value, 1);
+    } else {
+        let count = +localStorage.getItem(searchArea.value);
+        count += 1;
+        localStorage.setItem(searchArea.value, count);
+    }
+    localStorage.setItem('keywords', keywords);
     document.location.reload();
 }
 
@@ -72,7 +81,11 @@ function checkEnter(e) {
 
 searchArea.addEventListener('keydown', checkEnter, false);
 
-getMovie();
+if (film !== null) {
+    getMovie();
+    keywords = localStorage.getItem('keywords').split(',');
+    console.log(keywords);
+}
 
 const cross = document.querySelector('.search--cross');
 const form = document.querySelector('.search');
@@ -80,8 +93,9 @@ const form = document.querySelector('.search');
 function clearInput() {
     cross.addEventListener('click', () => {
         form.reset();
-        searchFilm();
     });
 }
 
 clearInput();
+
+export { keywords };
