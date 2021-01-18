@@ -3,6 +3,8 @@
 @import './header.scss';
 @import './search.scss';
 @import './swiper.scss';
+@import './hamburger.scss';
+@import './radio.scss';
 
 
 * {
@@ -21,4 +23,12 @@
     padding-top: 180px;
     padding-bottom: 200px;
     min-height: 550px;
+}
+
+.goog-te-combo {
+    outline: none;
+}
+
+.goog-te-gadget .goog-te-combo {
+    background-color: #69f3ea !important;
 }

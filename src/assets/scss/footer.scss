@@ -10,14 +10,14 @@
     }
 
     &__rss {
-        background-color: #000000;
+        background-color: #09aba1;
         padding: 5px;
         border-radius: 10px;
         margin-left: 10px;
     }
 
     &__author {
-        background-color: #000000;
+        background-color: #09aba1;
         padding: 5px;
         border-radius: 10px;
         margin-right: 10px;
@@ -25,10 +25,10 @@
 
     &__info {
         text-decoration: none;
-        color: wheat;
+        color: white;
 
         &:hover {
-            color: coral;
+            color: #08031d;
             transition: 0.5s linear;
         }
     }

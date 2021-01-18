@@ -8,4 +8,14 @@
         font-weight: 900;
         display: none;
     }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__translate {
+        margin-left: 20px;
+    }
 }

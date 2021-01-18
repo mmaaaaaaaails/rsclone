@@ -4,12 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rsclone</title>
+    <link href="https://www.radiobells.com/script/style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
     <div id="wrapper">
         <header class="header">
-            <h1 class="header__title">MovieSearch</h1>
-            <div id="google_translate_element"></div>
+            <div class="header__block">
+                <h1 class="header__title">MovieSearch</h1>
+                <div class="header__translate" id="google_translate_element"></div>
+                <div class="header__radio" id="radiobells_container"></div>
+                <div class="hamburger">
+                    <div class="hamburger__line-one"></div>
+                    <div class="hamburger__line-two"></div>
+                    <div class="hamburger__line-three"></div>
+                </div>
+                <nav class="menu">
+                    <ul class="menu__lists">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link menu__link--active">Main page</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Statistics</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main class="main">
             <form class="search">
@@ -43,6 +62,8 @@
             </div>
         </footer>
     </div>
+    <script type="text/javascript">var rad_backcolor="#434242"; var rad_logo = "black"; var rad_autoplay = false; var rad_width = "fixed"; var rad_width_px = 310;var rad_stations =[['https://emgregion.hostingradio.ru:8064/moscow.europaplus.mp3','Европа плюс','europaplus'],['http://air2.radiorecord.ru:9003/rr_320','Радио Рекорд','radiorecord'],['http://ic7.101.ru:8000/a99?','Радио Energy','nrj']];</script>
+    <script type="text/javascript" src="https://www.radiobells.com/script/v2_1.js" charset="UTF-8"></script>
     <script>
     function googleTranslateElementInit() {
         new google.translate.TranslateElement(
