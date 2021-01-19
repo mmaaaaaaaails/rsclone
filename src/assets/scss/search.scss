@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 70px 20px;
+    padding: 60px 20px;
 
     &__input {
         height: 30px;
@@ -29,6 +29,11 @@
             top: -10px;
             right: 15px;
             cursor: pointer;
+        }
+
+        &:hover {
+            transition: .6s linear;
+            filter: invert(50%) sepia(50%) saturate(2500%) hue-rotate(525deg) brightness(100%) contrast(100%);
         }
     }
 

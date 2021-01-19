@@ -5,6 +5,8 @@
 @import "./swiper.scss";
 @import "./hamburger.scss";
 @import "./radio.scss";
+@import "./statistics.scss";
+@import "./scrollbar.scss";
 
 * {
   margin: 0;
@@ -12,26 +14,28 @@
   font-family: "Lato", sans-serif;
 }
 
-#wrapper {
+.wrapper {
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .main {
-  background-image: url(/assets/img/kino.jpg);
+  background-image: url(/assets/img/kinoteatr.jpg);
   background-size: cover;
-  padding-top: 180px;
-  padding-bottom: 200px;
-  min-height: 550px;
+  height: 100vh;
 }
 
-.table {
-  display: none;
+.help {
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+    color: wheat;
+    transition: 0.5s linear;
+  }
 }
 
 .goog-te-combo {
   outline: none;
-}
-
-.goog-te-gadget .goog-te-combo {
-  background-color: #69f3ea !important;
 }

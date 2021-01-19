@@ -1,0 +1,28 @@
+.statistics {
+    position: absolute;
+    top: 26%;
+    left: 43%;
+}
+
+.table {
+    display: none;
+
+    &__dark {
+        font-size: 20px;
+        text-align: left;
+        border-collapse: collapse;
+        background: #252F48;
+        overflow: auto;
+        max-height: 393px;
+
+        & th {
+            color: #EDB749;
+            padding: 12px 17px;
+        }
+
+        & td {
+            color: #CAD4D6;
+            padding: 7px 17px
+        }
+    }
+}

@@ -1,5 +1,5 @@
 .header {
-    padding-top: 10px;
+    padding-top: 5px;
     width: 100%;
     position: absolute;
 
@@ -13,9 +13,5 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-    }
-
-    &__translate {
-        margin-left: 20px;
     }
 }

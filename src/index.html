@@ -7,11 +7,11 @@
     <link href="https://www.radiobells.com/script/style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-    <div id="wrapper">
-        <header class="header">
+    <header class="header">
+        <div class="wrapper">
             <div class="header__block">
                 <h1 class="header__title">MovieSearch</h1>
-                <div class="header__translate" id="google_translate_element"></div>
+                <div id="google_translate_element"></div>
                 <div class="header__radio" id="radiobells_container"></div>
                 <div class="hamburger">
                     <div class="hamburger__line-one"></div>
@@ -29,8 +29,10 @@
                     </ul>
                 </nav>
             </div>
-        </header>
-        <main class="main">
+        </div>
+    </header>
+    <main class="main">
+        <div class="wrapper">
             <form class="search">
                 <span class="search--search"></span>
                 <input class="search__input" type="text" placeholder="Search movie" autocomplete="off" autofocus>
@@ -39,20 +41,25 @@
                     <div class="search__icon"></div>
                 </button>
             </form>
+            <h3 class="help">Click on cards to swipe films</h3>
             <section class="slider-container">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                     </div>
                 </div>
             </section>
-            <table class="table" border="1">
-                <tr>
-                    <th>Keyword</th>
-                    <th>Number of requests</th>
-                </tr>
-           </table>
-        </main>
-        <footer class="footer">
+            <sectiom class="statistics">
+                <table class="table table__dark" border="1" align="center">
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Number of requests</th>
+                    </tr>
+                </table>
+            </sectiom>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="wrapper">
             <div class="wrapper">
                 <div class="footer__block">
                     <div class="footer__rss">
@@ -66,8 +73,8 @@
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
     <script type="text/javascript">var rad_backcolor="#434242"; var rad_logo = "black"; var rad_autoplay = false; var rad_width = "fixed"; var rad_width_px = 310;var rad_stations =[['https://emgregion.hostingradio.ru:8064/moscow.europaplus.mp3','Европа плюс','europaplus'],['http://air2.radiorecord.ru:9003/rr_320','Радио Рекорд','radiorecord'],['http://ic7.101.ru:8000/a99?','Радио Energy','nrj']];</script>
     <script type="text/javascript" src="https://www.radiobells.com/script/v2_1.js" charset="UTF-8"></script>
     <script>
