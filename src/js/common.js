@@ -12,19 +12,22 @@ const mySwiper = new Swiper('.swiper-container', {
     spaceBetween: 20,
     direction: 'horizontal',
     loop: true,
-    slideToClickedSlide: true,
+    slideToClickedSlide: false,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-        800: {
+        900: {
             slidesPerView: 3,
             spaceBetween: 20,
         },
-        480: {
+        767: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 20,
+        },
+        520: {
+            slidesPerView: 2,
         },
         320: {
             slidesPerView: 1,

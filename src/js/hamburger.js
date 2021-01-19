@@ -23,7 +23,7 @@ const stats = document.querySelector('#stats');
 const search = document.querySelector('.search');
 const slider = document.querySelector('.slider-container');
 const table = document.querySelector('.table');
-const help = document.querySelector('.help');
+const help = document.querySelector('.help__button');
 
 mainPage.addEventListener('click', () => {
     table.style.display = 'none';

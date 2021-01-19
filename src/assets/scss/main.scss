@@ -7,6 +7,8 @@
 @import "./radio.scss";
 @import "./statistics.scss";
 @import "./scrollbar.scss";
+@import "./media.scss";
+@import "./modal.scss";
 
 * {
   margin: 0;
@@ -23,17 +25,7 @@
 .main {
   background-image: url(/assets/img/kinoteatr.jpg);
   background-size: cover;
-  height: 100vh;
-}
-
-.help {
-  text-align: center;
-
-  &:hover {
-    cursor: pointer;
-    color: wheat;
-    transition: 0.5s linear;
-  }
+  height: 917px;
 }
 
 .goog-te-combo {
