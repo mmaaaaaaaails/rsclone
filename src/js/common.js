@@ -84,7 +84,6 @@ searchArea.addEventListener('keydown', checkEnter, false);
 if (film !== null) {
     getMovie();
     keywords = localStorage.getItem('keywords').split(',');
-    console.log(keywords);
 }
 
 const cross = document.querySelector('.search--cross');
@@ -93,7 +92,6 @@ const form = document.querySelector('.search');
 function clearInput() {
     cross.addEventListener('click', () => {
         form.reset();
-        searchFilm();
     });
 }
 
