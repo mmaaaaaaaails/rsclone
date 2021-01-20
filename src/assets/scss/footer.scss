@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     position: absolute;
-    margin-top: -40px;
+    margin-top: -60px;
 
     &__block {
         display: flex;
@@ -9,21 +9,25 @@
         flex-wrap: wrap;
     }
 
-    &__rss {
-        background-color: #000;
-        padding: 5px;
-        border-radius: 10px;
-    }
-
     &__author {
         background-color: #000;
-        padding: 5px;
-        border-radius: 10px;
+        padding: 14px;
+        border-radius: 20px;
+    }
+
+    &__name {
+        background-color: #000;
+        text-decoration: none;
+        color: white;
+        padding: 15px;
+        border-radius: 20px;
+        margin-bottom: 5px;
     }
 
     &__info {
         text-decoration: none;
         color: white;
+        margin-right: 10px;
 
         &:hover {
             color: gold;
@@ -31,22 +35,18 @@
         }
     }
 
+    &__and {
+        color: white;
+    }
+
     &__icon {
-        position: relative;
-        cursor: pointer;
+        background-image: url(/assets/img/git.svg);
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
 
-        &::after {
-            content: "";
-            position: absolute;
-            background-image: url(/assets/img/git.svg);
-            background-size: cover;
-            width: 30px;
-            height: 30px;
-            top: -10px;
-            left: 15px;
-        }
-
-        &:hover::after {
+        &:hover {
             animation: swing .9s ease;
             animation-iteration-count: 1;
             cursor: pointer;

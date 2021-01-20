@@ -8,4 +8,26 @@
         }
     }
 
+    .radio {
+        margin-top: 60px;
+    }
+
+    .footer {
+        margin-top: -100px;
+
+        &__rss {
+            margin-bottom: 18px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 479px) {
+
+    .search {
+
+        &__input {
+            width: 220px;
+        }
+    }
 }
