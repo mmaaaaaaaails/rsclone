@@ -46,7 +46,7 @@ async function getMovie() {
             <div class="сards">
                 <img class="сards__poster" src="${element.Poster}">
                 <a class="сards__title" href="${siteUrl}${element.imdbID}" target="_blank">${element.Title}</a>
-                <p class="сards__year">${element.Year}</p>
+                <p class="сards__year">${element.Year} (${extraData.Country})</p>
                 <div class="сards__raiting">
                     <span class="сards__star"></span>
                     <p class="сards__number">${extraData.imdbRating}</p>
