@@ -44,7 +44,7 @@ async function getMovie() {
             const extraData = await res.json();
             const cardsFilms = `<div class="swiper-slide">
             <div class="сards">
-                <a href="${siteUrl}${element.imdbID}">
+                <a href="${siteUrl}${element.imdbID}" target="_blank">
                     <img class="сards__poster" src="${element.Poster}">
                 </a>
                 <a class="сards__title" href="${siteUrl}${element.imdbID}" target="_blank">${element.Title}</a>
