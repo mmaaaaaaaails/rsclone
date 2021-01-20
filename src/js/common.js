@@ -12,7 +12,7 @@ const mySwiper = new Swiper('.swiper-container', {
     spaceBetween: 20,
     direction: 'horizontal',
     loop: true,
-    slideToClickedSlide: true,
+    slideToClickedSlide: false,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -44,7 +44,9 @@ async function getMovie() {
             const extraData = await res.json();
             const cardsFilms = `<div class="swiper-slide">
             <div class="сards">
-                <img class="сards__poster" src="${element.Poster}">
+                <a href="${siteUrl}${element.imdbID}">
+                    <img class="сards__poster" src="${element.Poster}">
+                </a>
                 <a class="сards__title" href="${siteUrl}${element.imdbID}" target="_blank">${element.Title}</a>
                 <p class="сards__year">${element.Year} (${extraData.Country})</p>
                 <div class="сards__raiting">
@@ -59,6 +61,8 @@ async function getMovie() {
         }
         getRating();
     });
+    const posters = document.querySelectorAll('.cards__poster');
+    console.log(posters);
 }
 
 function searchFilm() {
