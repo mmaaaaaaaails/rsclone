@@ -9,7 +9,7 @@
     }
 
     .radio {
-        margin-top: 60px;
+        margin-top: 30px;
     }
 
     .footer {
@@ -28,6 +28,13 @@
 
         &__input {
             width: 220px;
+        }
+    }
+
+    .footer {
+
+        &__block {
+            justify-content: center;
         }
     }
 }

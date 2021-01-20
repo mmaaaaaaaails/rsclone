@@ -24,12 +24,14 @@ const search = document.querySelector('.search');
 const slider = document.querySelector('.slider-container');
 const table = document.querySelector('.table');
 const help = document.querySelector('.help__button');
+const radio = document.querySelector('.radio');
 
 mainPage.addEventListener('click', () => {
     table.style.display = 'none';
     search.style.display = 'flex';
     slider.style.display = 'block';
     help.style.display = 'block';
+    radio.style.display = 'flex';
 });
 
 stats.addEventListener('click', () => {
@@ -37,6 +39,7 @@ stats.addEventListener('click', () => {
     slider.style.display = 'none';
     table.style.display = 'block';
     help.style.display = 'none';
+    radio.style.display = 'none';
 });
 
 menuLinks.forEach((link) => {

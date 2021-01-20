@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     z-index: 2;
-    background: rgba(19, 19, 19, 0.51);
+    background: rgba(19, 19, 19, 0.81);
     visibility: hidden;
     opacity: 0;
     transition: all 0.25s ease-in-out;
@@ -20,14 +20,14 @@
     }
 
     &__content {
-        width: 450px;
-        margin: 50% 0 0 -200px;
+        width: 100%;
         position: relative;
-        top: 50%;
-        left: 50%;
         opacity: 0;
         transition: all 0.5s ease-in-out;
         border-radius: 7px;
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
     }
 
     &__hide {
@@ -40,7 +40,7 @@
         color: #777;
         cursor: pointer;
         position: absolute;
-        right: 10px;
+        margin-left: 220px;
 
         &:hover {
             color: black;
@@ -49,8 +49,6 @@
     }
 
     &__open &__content {
-        display: block;
-        margin-top: -200px;
         opacity: 1;
         transition: all 0.5s ease-in-out;
     }

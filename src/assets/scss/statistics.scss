@@ -1,7 +1,6 @@
 .statistics {
-    position: absolute;
-    top: 26%;
-    left: 43%;
+    display: flex;
+    justify-content: center;
 }
 
 .table {
@@ -13,7 +12,8 @@
         border-collapse: collapse;
         background: #252F48;
         overflow: auto;
-        max-height: 393px;
+        max-height: 100%;
+        margin-top: 100px;
 
         & th {
             color: #EDB749;
