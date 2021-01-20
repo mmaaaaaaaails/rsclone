@@ -41,14 +41,18 @@ async function getMovie() {
     data.Search.forEach((element) => {
         async function getRating() {
             const res = await fetch(`https://www.omdbapi.com/?i=${element.imdbID}&apikey=9b67fc54`);
-            const rating = await res.json();
+            const extraData = await res.json();
             const cardsFilms = `<div class="swiper-slide">
             <div class="сards">
-            <img class="сards__poster" src="${element.Poster}">
-            <a class="сards__title" href="${siteUrl}${element.imdbID}" target="_blank">${element.Title}</a>
-            <p class="сards__year">${element.Year}</p>
-            <p>${rating.imdbRating}</p>
-            </div>
+                <img class="сards__poster" src="${element.Poster}">
+                <a class="сards__title" href="${siteUrl}${element.imdbID}" target="_blank">${element.Title}</a>
+                <p class="сards__year">${element.Year}</p>
+                <div class="сards__raiting">
+                    <span class="сards__star"></span>
+                    <p class="сards__number">${extraData.imdbRating}</p>
+                </div>
+
+                </div>
             </div>`;
             mySwiper.appendSlide(cardsFilms);
             return data;

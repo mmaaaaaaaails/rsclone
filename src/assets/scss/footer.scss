@@ -22,12 +22,18 @@
         padding: 15px;
         border-radius: 20px;
         margin-bottom: 5px;
+        transition: 0.5s linear;
+
+        &:hover {
+            color: gold;
+            transition: 0.5s linear;
+        }
     }
 
     &__info {
         text-decoration: none;
         color: white;
-        margin-right: 10px;
+        transition: 0.5s linear;
 
         &:hover {
             color: gold;
@@ -37,6 +43,7 @@
 
     &__and {
         color: white;
+        padding: 0 5px;
     }
 
     &__icon {
