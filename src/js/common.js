@@ -12,22 +12,19 @@ const mySwiper = new Swiper('.swiper-container', {
     spaceBetween: 20,
     direction: 'horizontal',
     loop: true,
-    slideToClickedSlide: false,
+    slideToClickedSlide: true,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-        900: {
+        800: {
             slidesPerView: 3,
             spaceBetween: 20,
         },
-        767: {
+        480: {
             slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        520: {
-            slidesPerView: 2,
+            spaceBetween: 10,
         },
         320: {
             slidesPerView: 1,
@@ -42,15 +39,21 @@ async function getMovie() {
     data = await response.json();
     const siteUrl = 'https://www.imdb.com/title/';
     data.Search.forEach((element) => {
-        const cardsFilms = `<div class="swiper-slide">
-        <div class="сards">
-        <img class="сards__poster" src="${element.Poster}">
-        <a class="сards__title" href="${siteUrl}${element.imdbID}" target="_blank">${element.Title}</a>
-        <p class="сards__year">${element.Year}</p>
-        </div>
-        </div>`;
-        mySwiper.appendSlide(cardsFilms);
-        return data;
+        async function getRating() {
+            const res = await fetch(`https://www.omdbapi.com/?i=${element.imdbID}&apikey=9b67fc54`);
+            const rating = await res.json();
+            const cardsFilms = `<div class="swiper-slide">
+            <div class="сards">
+            <img class="сards__poster" src="${element.Poster}">
+            <a class="сards__title" href="${siteUrl}${element.imdbID}" target="_blank">${element.Title}</a>
+            <p class="сards__year">${element.Year}</p>
+            <p>${rating.imdbRating}</p>
+            </div>
+            </div>`;
+            mySwiper.appendSlide(cardsFilms);
+            return data;
+        }
+        getRating();
     });
 }
 
