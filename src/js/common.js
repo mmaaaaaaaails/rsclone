@@ -61,8 +61,6 @@ async function getMovie() {
         }
         getRating();
     });
-    const posters = document.querySelectorAll('.cards__poster');
-    console.log(posters);
 }
 
 function searchFilm() {
@@ -78,6 +76,9 @@ function searchFilm() {
         count += 1;
         localStorage.setItem(searchArea.value, count);
     }
+    let total = +localStorage.getItem('total');
+    total += 1;
+    localStorage.setItem('total', total);
     localStorage.setItem('keywords', keywords);
     document.location.reload();
 }
