@@ -1,3 +1,5 @@
+import { table } from './statistics';
+
 const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu');
 
@@ -18,11 +20,11 @@ function hideMenuLevel() {
 }
 
 const menuLinks = document.querySelectorAll('.menu__link');
+const menuItem = document.querySelectorAll('.menu__item');
 const mainPage = document.querySelector('#main__page');
 const stats = document.querySelector('#stats');
 const search = document.querySelector('.search');
 const slider = document.querySelector('.slider-container');
-const table = document.querySelector('.table');
 const help = document.querySelector('.help__button');
 const radio = document.querySelector('.radio');
 
@@ -44,8 +46,10 @@ stats.addEventListener('click', () => {
 
 menuLinks.forEach((link) => {
     link.addEventListener('click', () => {
-        menuLinks.forEach((item) => item.classList = 'menu__link');
-        link.classList.add('menu__link--active');
+        menuLinks.forEach(() => {
+            menuItem.classList = 'menu__link';
+            link.classList.add('menu__link--active');
+        });
     });
 });
 

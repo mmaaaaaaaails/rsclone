@@ -3,10 +3,13 @@
     "rules": {
         "indent": [2, 4],
         "linebreak-style": 0,
-        "quotes": [2, "single"]
+        "quotes": [2, "single"],
+        "import/prefer-default-export": "off"
     },
 
     "globals": {
-        "document": true
+        "document": true,
+        "localStorage": true,
+        "fetch": true
     }
 }

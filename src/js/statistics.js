@@ -17,3 +17,7 @@ if (keywords !== undefined) {
         table.appendChild(row);
     }
 }
+
+export {
+    table,
+};
