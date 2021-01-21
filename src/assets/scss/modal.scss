@@ -1,108 +1,120 @@
 .modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  background: rgba(19, 19, 19, 0.81);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+
+  &__open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__show {
+    display: block;
+  }
+
+  &__content {
     width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background: rgba(19, 19, 19, 0.81);
-    visibility: hidden;
+    position: relative;
     opacity: 0;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
 
-    &__open {
-        opacity: 1;
-        visibility: visible;
+  &__hide {
+    display: none;
+  }
+
+  &__close {
+    font-size: 28px;
+    display: block;
+    color: #777;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 220px;
+
+    &:hover {
+      color: black;
+      transition: all 0.5s;
     }
+  }
 
-    &__show {
-        display: block;
-    }
-
-    &__content {
-        width: 100%;
-        position: relative;
-        opacity: 0;
-        transition: all 0.5s ease-in-out;
-        border-radius: 7px;
-        display: flex;
-        justify-content: center;
-        margin-top: 100px;
-    }
-
-    &__hide {
-        display: none;
-    }
-
-    &__close {
-        font-size: 28px;
-        display: block;
-        color: #777;
-        cursor: pointer;
-        position: absolute;
-        margin-left: 220px;
-
-        &:hover {
-            color: black;
-            transition: all .5s;
-        }
-    }
-
-    &__open &__content {
-        opacity: 1;
-        transition: all 0.5s ease-in-out;
-    }
+  &__open &__content {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
 }
 
 .info {
-    color: black;
-    font-size: 18px;
-    border-radius: 7px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    min-height: 250px;
-    background-image: linear-gradient(to bottom left, rgb(216, 218, 230), rgb(202, 210, 224), rgb(188, 203, 219),
-    rgb(174, 195, 213), rgb(160, 187, 207), rgb(146, 179, 202), rgb(132, 172, 196), rgb(118, 164, 191),
-    rgb(104, 156, 185), rgb(90, 148, 179), rgb(76, 141, 174), rgb(62, 133, 168));
+  color: black;
+  font-size: 18px;
+  border-radius: 7px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 250px;
+  background-image: linear-gradient(
+    to bottom left,
+    rgb(216, 218, 230),
+    rgb(202, 210, 224),
+    rgb(188, 203, 219),
+    rgb(174, 195, 213),
+    rgb(160, 187, 207),
+    rgb(146, 179, 202),
+    rgb(132, 172, 196),
+    rgb(118, 164, 191),
+    rgb(104, 156, 185),
+    rgb(90, 148, 179),
+    rgb(76, 141, 174),
+    rgb(62, 133, 168)
+  );
 
-    &__title {
-        font-size: 22px;
-        text-align: center;
-    }
+  &__title {
+    font-size: 22px;
+    text-align: center;
+  }
 
-    &__image {
-        object-fit: contain;
-    }
+  &__image {
+    object-fit: contain;
+  }
 }
 
 .help {
+  display: flex;
+  justify-content: center;
 
-    display: flex;
-    justify-content: center;
-
-    &__button {
-        color: #f0d8d9;
-        text-align: center;
-        margin-bottom: 10px;
-        border-radius: 20px;
-        width: 100px;
-        height: 35px;
-        font-size: 20px;
-        outline: none;
-        border: 0;
-        cursor: pointer;
-        background: #312f2f linear-gradient(to left, transparent, transparent 50%, #f0d8d9 50%);
-        background-position: 100% 0;
-        background-size: 200% 100%;
-        transition: all .5s ease-in;
-        position: relative;
+  &__button {
+    color: #f0d8d9;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    background: #312f2f
+      linear-gradient(to left, transparent, transparent 50%, #f0d8d9 50%);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all 0.5s ease-in;
+    position: relative;
 
     &:hover {
-        color: #312f2f;
-        transition: all 0.5s ease-in;
-        background-position: 0 0;
-        }
+      color: #312f2f;
+      transition: all 0.5s ease-in;
+      background-position: 0 0;
     }
+  }
 }
