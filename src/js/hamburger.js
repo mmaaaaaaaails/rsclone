@@ -20,34 +20,56 @@ function hideMenuLevel() {
 }
 
 const menuLinks = document.querySelectorAll('.menu__link');
-const menuItem = document.querySelectorAll('.menu__item');
 const mainPage = document.querySelector('#main__page');
 const stats = document.querySelector('#stats');
 const search = document.querySelector('.search');
 const slider = document.querySelector('.slider-container');
 const help = document.querySelector('.help__button');
-const radio = document.querySelector('.radio');
 
-mainPage.addEventListener('click', () => {
-    table.style.display = 'none';
-    search.style.display = 'flex';
-    slider.style.display = 'block';
-    help.style.display = 'block';
-    radio.style.display = 'flex';
-});
-
-stats.addEventListener('click', () => {
+function openStats() {
     search.style.display = 'none';
     slider.style.display = 'none';
     table.style.display = 'block';
     help.style.display = 'none';
-    radio.style.display = 'none';
+}
+
+function openMain() {
+    table.style.display = 'none';
+    search.style.display = 'flex';
+    slider.style.display = 'block';
+    help.style.display = 'block';
+}
+
+mainPage.addEventListener('click', () => {
+    openMain();
+});
+
+stats.addEventListener('click', () => {
+    openStats();
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.altKey && e.code === 'KeyS') {
+        openMain();
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.altKey && e.code === 'KeyA') {
+        openStats();
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.altKey && e.code === 'KeyJ') {
+        document.location.reload();
+    }
 });
 
 menuLinks.forEach((link) => {
     link.addEventListener('click', () => {
-        menuLinks.forEach(() => {
-            menuItem.classList = 'menu__link';
+        menuLinks.forEach((item) => {
+            item.classList = 'menu__link';
             link.classList.add('menu__link--active');
         });
     });
