@@ -28,6 +28,26 @@ function showModal() {
     infoImage.src = '/assets/img/swipe.png';
     infoImage.alt = 'swipe slide';
     popupInfo.append(infoImage);
+
+    const hotKeys = document.createElement('h3');
+    hotKeys.className = 'info__keys';
+    hotKeys.innerHTML = 'Hot keys:';
+    popupInfo.append(hotKeys);
+
+    const infoStatistics = document.createElement('p');
+    infoStatistics.className = 'info__description';
+    infoStatistics.innerHTML = 'alt + A - statistics';
+    popupInfo.append(infoStatistics);
+
+    const infoMainPage = document.createElement('p');
+    infoMainPage.className = 'info__description';
+    infoMainPage.innerHTML = 'alt + S - main page';
+    popupInfo.append(infoMainPage);
+
+    const infoReload = document.createElement('p');
+    infoReload.className = 'info__description';
+    infoReload.innerHTML = 'alt + J - reload';
+    popupInfo.append(infoReload);
 }
 
 function openModal() {
