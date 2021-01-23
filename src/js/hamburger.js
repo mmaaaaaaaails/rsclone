@@ -24,17 +24,20 @@ const mainPage = document.querySelector('#main__page');
 const stats = document.querySelector('#stats');
 const search = document.querySelector('.search');
 const slider = document.querySelector('.slider-container');
+const help = document.querySelector('.help__button');
 
 function openStats() {
     search.style.display = 'none';
     slider.style.display = 'none';
     table.style.display = 'block';
+    help.style.marginTop = '100px';
 }
 
 function openMain() {
     table.style.display = 'none';
     search.style.display = 'flex';
     slider.style.display = 'block';
+    help.style.marginTop = '0px';
 }
 
 mainPage.addEventListener('click', () => {
