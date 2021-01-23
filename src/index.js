@@ -5,3 +5,4 @@ import './js/hamburger';
 import './js/statistics';
 import './js/modal';
 import './js/preloader';
+import './js/keys';

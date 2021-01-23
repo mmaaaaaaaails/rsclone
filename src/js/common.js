@@ -105,11 +105,12 @@ const cross = document.querySelector('.search--cross');
 const form = document.querySelector('.search');
 
 function clearInput() {
-    cross.addEventListener('click', () => {
-        form.reset();
-    });
+    form.reset();
+    searchArea.focus();
 }
 
-clearInput();
+cross.addEventListener('click', () => {
+    clearInput();
+});
 
-export { keywords };
+export { keywords, form, clearInput };

@@ -24,20 +24,17 @@ const mainPage = document.querySelector('#main__page');
 const stats = document.querySelector('#stats');
 const search = document.querySelector('.search');
 const slider = document.querySelector('.slider-container');
-const help = document.querySelector('.help__button');
 
 function openStats() {
     search.style.display = 'none';
     slider.style.display = 'none';
     table.style.display = 'block';
-    help.style.display = 'none';
 }
 
 function openMain() {
     table.style.display = 'none';
     search.style.display = 'flex';
     slider.style.display = 'block';
-    help.style.display = 'block';
 }
 
 mainPage.addEventListener('click', () => {
@@ -46,24 +43,6 @@ mainPage.addEventListener('click', () => {
 
 stats.addEventListener('click', () => {
     openStats();
-});
-
-document.addEventListener('keydown', (e) => {
-    if (e.altKey && e.code === 'KeyS') {
-        openMain();
-    }
-});
-
-document.addEventListener('keydown', (e) => {
-    if (e.altKey && e.code === 'KeyA') {
-        openStats();
-    }
-});
-
-document.addEventListener('keydown', (e) => {
-    if (e.altKey && e.code === 'KeyJ') {
-        document.location.reload();
-    }
 });
 
 menuLinks.forEach((link) => {
@@ -77,3 +56,5 @@ menuLinks.forEach((link) => {
 
 openMenuLevel();
 hideMenuLevel();
+
+export { openMain, openStats };

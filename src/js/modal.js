@@ -36,36 +36,57 @@ function showModal() {
 
     const infoStatistics = document.createElement('p');
     infoStatistics.className = 'info__description';
-    infoStatistics.innerHTML = 'alt + A - statistics';
+    infoStatistics.innerHTML = 'alt + A - main page';
     popupInfo.append(infoStatistics);
 
     const infoMainPage = document.createElement('p');
     infoMainPage.className = 'info__description';
-    infoMainPage.innerHTML = 'alt + S - main page';
+    infoMainPage.innerHTML = 'alt + S - statistics';
     popupInfo.append(infoMainPage);
 
     const infoReload = document.createElement('p');
     infoReload.className = 'info__description';
     infoReload.innerHTML = 'alt + J - reload';
     popupInfo.append(infoReload);
+
+    const infoSearch = document.createElement('p');
+    infoSearch.className = 'info__description';
+    infoSearch.innerHTML = 'alt + H - clear search engine';
+    popupInfo.append(infoSearch);
+
+    const infoHelp = document.createElement('p');
+    infoHelp.className = 'info__description';
+    infoHelp.innerHTML = 'alt + K - help';
+    popupInfo.append(infoHelp);
+
+    const infoCloseHelp = document.createElement('p');
+    infoCloseHelp.className = 'info__description';
+    infoCloseHelp.innerHTML = 'alt + L - close help';
+    popupInfo.append(infoCloseHelp);
 }
 
 function openModal() {
-    const buttonHelp = document.querySelector('.help__button');
-    buttonHelp.addEventListener('click', () => {
-        modal.classList.add('modal__open');
-        modal.classList.remove('modal__hide');
-    });
+    modal.classList.add('modal__open');
+    modal.classList.remove('modal__hide');
+}
+
+const buttonHelp = document.querySelector('.help__button');
+buttonHelp.addEventListener('click', () => {
+    openModal();
+});
+
+function closeModal() {
+    modal.classList.remove('modal__open');
 }
 
 function closeModalCross() {
     const modalClose = document.querySelector('.modal__close');
     modalClose.addEventListener('click', () => {
-        modal.classList.remove('modal__open');
+        closeModal();
     });
 }
 
-function closeModal() {
+function closeModalBlackout() {
     document.addEventListener('click', (event) => {
         if (event.target.closest('.modal')) {
             modal.classList.remove('modal__open');
@@ -74,6 +95,7 @@ function closeModal() {
 }
 
 showModal();
-openModal();
 closeModalCross();
-closeModal();
+closeModalBlackout();
+
+export { openModal, closeModal };
