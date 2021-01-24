@@ -28,7 +28,7 @@ const help = document.querySelector('.help__button');
 function openStats() {
     search.style.display = 'none';
     slider.style.display = 'none';
-    stats.style.display = 'flex';
+    stats.style.display = 'block';
     help.style.marginTop = '100px';
     localStorage.setItem('page', 'stats');
 }

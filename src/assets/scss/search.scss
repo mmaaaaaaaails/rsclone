@@ -76,3 +76,12 @@
         }
     }
 }
+
+.error {
+    position: absolute;
+    top: 11%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: mintcream;
+    font-weight: bold;
+}

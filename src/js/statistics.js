@@ -2,7 +2,7 @@ import { keywords } from './common';
 
 const table = document.querySelector('.table');
 const totalNumber = document.querySelector('.total');
-const reset = document.querySelector('.reset');
+const reset = document.querySelector('.statistics__reset');
 
 if (keywords !== undefined) {
     totalNumber.textContent += +localStorage.getItem('total');

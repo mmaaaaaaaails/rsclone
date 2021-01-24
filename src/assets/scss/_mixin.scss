@@ -1,0 +1,24 @@
+@mixin button {
+    color: #f0d8d9;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    background: #312f2f
+    linear-gradient(to left, transparent, transparent 50%, #f0d8d9 50%);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all 0.5s ease-in;
+    position: relative;
+
+    &:hover {
+        color: #312f2f;
+        transition: all 0.5s ease-in;
+        background-position: 0 0;
+    }
+}

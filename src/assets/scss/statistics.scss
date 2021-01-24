@@ -1,6 +1,15 @@
+@import "./_mixin.scss";
+
 .statistics {
   display: none;
   justify-content: center;
+  object-fit: contain;
+
+  &__reset {
+    display: block;
+    margin: 10px auto auto;
+    @include button;
+  }
 }
 
 .total {
@@ -9,7 +18,9 @@
 }
 
 .table {
-  display: block;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
 
   &__dark {
     font-size: 20px;
