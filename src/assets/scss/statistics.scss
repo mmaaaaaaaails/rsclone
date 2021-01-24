@@ -1,5 +1,5 @@
 .statistics {
-  display: flex;
+  display: none;
   justify-content: center;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .table {
-  display: none;
+  display: block;
 
   &__dark {
     font-size: 20px;

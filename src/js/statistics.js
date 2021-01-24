@@ -2,6 +2,7 @@ import { keywords } from './common';
 
 const table = document.querySelector('.table');
 const totalNumber = document.querySelector('.total');
+const reset = document.querySelector('.reset');
 
 if (keywords !== undefined) {
     totalNumber.textContent += +localStorage.getItem('total');
@@ -18,6 +19,8 @@ if (keywords !== undefined) {
     }
 }
 
-export {
-    table,
-};
+reset.addEventListener('click', () => {
+    localStorage.clear();
+    localStorage.setItem('page', 'stats');
+    document.location.reload();
+});

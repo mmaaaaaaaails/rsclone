@@ -1,5 +1,3 @@
-import { table } from './statistics';
-
 const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu');
 
@@ -21,21 +19,22 @@ function hideMenuLevel() {
 
 const menuLinks = document.querySelectorAll('.menu__link');
 const mainPage = document.querySelector('#main__page');
-const stats = document.querySelector('#stats');
+const statsPage = document.querySelector('#stats');
 const search = document.querySelector('.search');
 const slider = document.querySelector('.slider-container');
+const stats = document.querySelector('.statistics');
 const help = document.querySelector('.help__button');
 
 function openStats() {
     search.style.display = 'none';
     slider.style.display = 'none';
-    table.style.display = 'block';
+    stats.style.display = 'flex';
     help.style.marginTop = '100px';
     localStorage.setItem('page', 'stats');
 }
 
 function openMain() {
-    table.style.display = 'none';
+    stats.style.display = 'none';
     search.style.display = 'flex';
     slider.style.display = 'block';
     help.style.marginTop = '0px';
@@ -46,14 +45,14 @@ mainPage.addEventListener('click', () => {
     openMain();
 });
 
-stats.addEventListener('click', () => {
+statsPage.addEventListener('click', () => {
     openStats();
 });
 
 if (localStorage.getItem('page') === 'stats') {
     openStats();
     mainPage.classList = 'menu__link';
-    stats.classList.add('menu__link--active');
+    statsPage.classList.add('menu__link--active');
 }
 
 menuLinks.forEach((link) => {
