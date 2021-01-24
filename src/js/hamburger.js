@@ -31,6 +31,7 @@ function openStats() {
     slider.style.display = 'none';
     table.style.display = 'block';
     help.style.marginTop = '100px';
+    localStorage.setItem('page', 'stats');
 }
 
 function openMain() {
@@ -38,6 +39,7 @@ function openMain() {
     search.style.display = 'flex';
     slider.style.display = 'block';
     help.style.marginTop = '0px';
+    localStorage.setItem('page', 'main');
 }
 
 mainPage.addEventListener('click', () => {
@@ -47,6 +49,12 @@ mainPage.addEventListener('click', () => {
 stats.addEventListener('click', () => {
     openStats();
 });
+
+if (localStorage.getItem('page') === 'stats') {
+    openStats();
+    mainPage.classList = 'menu__link';
+    stats.classList.add('menu__link--active');
+}
 
 menuLinks.forEach((link) => {
     link.addEventListener('click', () => {
