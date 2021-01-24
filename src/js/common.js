@@ -38,49 +38,58 @@ async function getMovie() {
     const response = await fetch(url);
     data = await response.json();
     const siteUrl = 'https://www.imdb.com/title/';
-    data.Search.forEach((element) => {
-        async function getRating() {
-            const res = await fetch(`https://www.omdbapi.com/?i=${element.imdbID}&apikey=9b67fc54`);
-            const extraData = await res.json();
-            const cardsFilms = `<div class="swiper-slide">
-            <div class="сards">
-                <a href="${siteUrl}${element.imdbID}" target="_blank">
-                    <img class="сards__poster" src="${element.Poster}">
-                </a>
-                <a class="сards__title" href="${siteUrl}${element.imdbID}" target="_blank">${element.Title}</a>
-                <p class="сards__year">${element.Year} (${extraData.Country})</p>
-                <div class="сards__raiting">
-                    <span class="сards__star"></span>
-                    <p class="сards__number">${extraData.imdbRating}</p>
-                </div>
+    if (data.Search === undefined) {
+        const error = document.createElement('p');
+        error.className = 'error';
+        error.textContent = `Nothing for '${film}'`;
+        document.querySelector('.slider-container').append(error);
+    } else {
+        data.Search.forEach((element) => {
+            async function getRating() {
+                const res = await fetch(`https://www.omdbapi.com/?i=${element.imdbID}&apikey=9b67fc54`);
+                const extraData = await res.json();
+                const cardsFilms = `<div class="swiper-slide">
+                <div class="сards">
+                    <a href="${siteUrl}${element.imdbID}" target="_blank">
+                        <img class="сards__poster" src="${element.Poster}">
+                    </a>
+                    <a class="сards__title" href="${siteUrl}${element.imdbID}" target="_blank">${element.Title}</a>
+                    <p class="сards__year">${element.Year} (${extraData.Country})</p>
+                    <div class="сards__raiting">
+                        <span class="сards__star"></span>
+                        <p class="сards__number">${extraData.imdbRating}</p>
+                    </div>
 
-                </div>
-            </div>`;
-            mySwiper.appendSlide(cardsFilms);
-            return data;
-        }
-        getRating();
-    });
+                    </div>
+                </div>`;
+                mySwiper.appendSlide(cardsFilms);
+                return data;
+            }
+            getRating();
+        });
+    }
 }
 
 function searchFilm() {
-    localStorage.setItem('film', searchArea.value);
-    if (keywords === undefined) {
-        keywords = searchArea.value;
-        localStorage.setItem(searchArea.value, 1);
-    } else if (keywords.includes(searchArea.value) === false) {
-        keywords.push(searchArea.value);
-        localStorage.setItem(searchArea.value, 1);
-    } else {
-        let count = +localStorage.getItem(searchArea.value);
-        count += 1;
-        localStorage.setItem(searchArea.value, count);
+    if (searchArea.value !== '') {
+        localStorage.setItem('film', searchArea.value);
+        if (keywords === undefined) {
+            keywords = searchArea.value;
+            localStorage.setItem(searchArea.value, 1);
+        } else if (keywords.includes(searchArea.value) === false) {
+            keywords.push(searchArea.value);
+            localStorage.setItem(searchArea.value, 1);
+        } else {
+            let count = +localStorage.getItem(searchArea.value);
+            count += 1;
+            localStorage.setItem(searchArea.value, count);
+        }
+        let total = +localStorage.getItem('total');
+        total += 1;
+        localStorage.setItem('total', total);
+        localStorage.setItem('keywords', keywords);
+        document.location.reload();
     }
-    let total = +localStorage.getItem('total');
-    total += 1;
-    localStorage.setItem('total', total);
-    localStorage.setItem('keywords', keywords);
-    document.location.reload();
 }
 
 searchBtn.addEventListener('click', () => {
