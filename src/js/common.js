@@ -3,7 +3,7 @@ import 'swiper/swiper-bundle.css';
 
 const searchBtn = document.querySelector('.search__btn');
 const searchArea = document.querySelector('.search__input');
-const film = localStorage.getItem('film');
+let film = localStorage.getItem('film');
 let data;
 let keywords;
 
@@ -71,18 +71,19 @@ async function getMovie() {
 }
 
 function searchFilm() {
-    if (searchArea.value !== '') {
-        localStorage.setItem('film', searchArea.value);
+    film = searchArea.value.trim();
+    if (film !== '') {
+        localStorage.setItem('film', film);
         if (keywords === undefined) {
-            keywords = searchArea.value;
-            localStorage.setItem(searchArea.value, 1);
-        } else if (keywords.includes(searchArea.value) === false) {
-            keywords.push(searchArea.value);
-            localStorage.setItem(searchArea.value, 1);
+            keywords = film;
+            localStorage.setItem(film, 1);
+        } else if (keywords.includes(film) === false) {
+            keywords.push(film);
+            localStorage.setItem(film, 1);
         } else {
-            let count = +localStorage.getItem(searchArea.value);
+            let count = +localStorage.getItem(film);
             count += 1;
-            localStorage.setItem(searchArea.value, count);
+            localStorage.setItem(film, count);
         }
         let total = +localStorage.getItem('total');
         total += 1;
