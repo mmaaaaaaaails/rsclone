@@ -1,0 +1,17 @@
+.header {
+    padding-top: 5px;
+    width: 100%;
+    position: absolute;
+
+    &__title {
+        color: white;
+        font-weight: 900;
+        display: none;
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}

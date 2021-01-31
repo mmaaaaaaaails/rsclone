@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rsclone</title>
+    <link href="https://www.radiobells.com/script/style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__block">
+                <h1 class="header__title">MovieSearch</h1>
+                <div id="google_translate_element"></div>
+                <div class="hamburger">
+                    <div class="hamburger__line-one"></div>
+                    <div class="hamburger__line-two"></div>
+                    <div class="hamburger__line-three"></div>
+                </div>
+                <nav class="menu">
+                    <ul class="menu__lists">
+                        <li class="menu__item">
+                            <a href="#" id="main__page" class="menu__link menu__link--active">Main page</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" id="stats" class="menu__link">Statistics</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="wrapper">
+            <form class="search">
+                <span class="search--search"></span>
+                <input class="search__input" type="text" placeholder="Search movie" autocomplete="off" autofocus>
+                <span class="search--cross"></span>
+                <button type="button" class="search__btn">
+                    <div class="search__icon"></div>
+                </button>
+            </form>
+            <section class="help">
+                <button class="help__button">Help</button>
+            </section>
+            <section class="slider-container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                    </div>
+                </div>
+            </section>
+            <section class="statistics">
+                <table class="table table__dark" border="1" align="center">
+                    <tr>
+                        <th class="total" colspan="2">Total number of requests: </th>
+                    </tr>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Number of requests</th>
+                    </tr>
+                </table>
+                <button class="statistics__reset" type="button">Reset</button>
+            </section>
+            <section class="radio">
+                <div id="radiobells_container">
+                    <a href="https://www.radiobells.com/" rel="nofollow" id="RP_link"></a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__block">
+                <div class="footer__rss">
+                    <a href="https://rs.school/js/" class="footer__name">RS School 2020q3</a>
+                    <span class="footer__icon"></span>
+                </div>
+                <div class="footer__author">
+                    <a href="https://github.com/ivan-scherbuk" class="footer__info">Ivan Scherbuk</a>
+                    <class class="footer__and">and</class>
+                    <a href="https://github.com/mmaaaaaaaails" class="footer__info">Vadim Dudko</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="preloader">
+        <div class="preloader-wrapper">
+            <div class="preloader-one"></div>
+            <div class="preloader-one"></div>
+            <div class="preloader-one"></div>
+            <div class="preloader-one"></div>
+            <div class="preloader-two"></div>
+            <div class="preloader-three"></div>
+        </div>
+    </div>
+    <script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'en'},
+            'google_translate_element'
+        );
+    }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">var rad_backcolor="#434242"; var rad_logo = "black"; var rad_autoplay = false; var rad_width = "fixed"; var rad_width_px = 310;var rad_stations =[['https://emgregion.hostingradio.ru:8064/moscow.europaplus.mp3','Европа плюс','europaplus'],['http://air2.radiorecord.ru:9003/rr_320','Радио Рекорд','radiorecord'],['http://ic7.101.ru:8000/a99?','Радио Energy','nrj']];</script>
+<script type="text/javascript" src="https://www.radiobells.com/script/v2_1.js" charset="UTF-8"></script>
+</body>
+</html>
