@@ -1,0 +1,74 @@
+.swiper-container {
+    width: 70%;
+    min-height: 498px !important;
+}
+
+.swiper-slide:hover {
+    cursor: pointer;
+}
+
+.сards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+
+    &__poster{
+        width: 100%;
+        height: 385px;
+        padding-bottom: 10px;
+        border-radius: 20px;
+        object-fit: contain;
+    }
+
+    &__title {
+        color: #000000;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 10px;
+        text-decoration: none;
+
+        &:hover {
+            color: wheat;
+            transition: 0.5s linear;
+        }
+    }
+
+    &__year {
+        text-align: center;
+        color: #000000;
+        font-weight: bold;
+
+        &:hover {
+            color: wheat;
+            transition: 0.5s linear;
+        }
+    }
+
+    &__raiting {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    &__star {
+        background-image: url(/assets/img/r.svg);
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+    }
+
+    &__number {
+        font-weight: bold;
+        padding: 5px;
+        color: darkorange;
+
+        &:hover {
+            color: wheat;
+            transition: 0.5s linear;
+        }
+    }
+
+
+}

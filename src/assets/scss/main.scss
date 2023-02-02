@@ -1,0 +1,35 @@
+@import "./footer.scss";
+@import "./animation.scss";
+@import "./header.scss";
+@import "./search.scss";
+@import "./swiper.scss";
+@import "./hamburger.scss";
+@import "./radio.scss";
+@import "./statistics.scss";
+@import "./scrollbar.scss";
+@import "./media.scss";
+@import "./modal.scss";
+@import "./preloader.scss";
+@import "./_mixin.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.main {
+  background-image: url(/assets/img/kinoteatr.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+.goog-te-combo {
+  outline: none;
+}
